@@ -5,7 +5,24 @@ you can use this web app after signup or login by guest.
 
 # How to use it
 1. npm install
-1. change configure detials in configure.js
+1. change configure detials in config.js
+
+```javascript
+# inside config.js
+export default {
+  apiGateway: {
+    REGION: "YOUR-API-GATEWAY-REGION",
+    URL: "YOUR-API-GATEWAY-END-POINT-URL"
+  },
+  cognito: {
+    REGION: "YOUR-COGNITO-REGION",
+    USER_POOL_ID: "YOUR-COGNITO-USER-POOL-ID",
+    APP_CLIENT_ID: "YOUR-COGNITO-APP-CLIENT-ID",
+    IDENTITY_POOL_ID: "YOUR-COGNITO-IDENTITY-POOL-ID"
+  }
+};
+```
+
 1. deploy to hosting service (How deploy static homepage on the AWS S3)
 
 # How the application works
