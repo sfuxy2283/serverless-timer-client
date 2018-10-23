@@ -35,9 +35,34 @@ export default {
 ### Start timer
 Now - sinceFrom 
 
+```javascript
+startTimer = async timerId => {
+    try {
+      const startTime = Date.now();
+      await API.put("timers", `/timers/${timerId}/start`, {
+        body: { start: startTime }
+      });
+     ...
+  };
+
+
+```
+
 ### Stop timer
 total elapsed time  = preivous elapsed time + new elapsed time(the time user click stop button - running since)
 runningSince = null
+```javascript
+  stopTimer = async timer => {
+    const now = Date.now();
+    const lastElapsed = now - timer.runningSince;
+    const updatedElapsed = timer.elapsed + lastElapsed;
+    try {
+      await API.put("timers", `/timers/${timer.timerId}/stop`, {
+        body: { elapsed: updatedElapsed }
+      });
+    ...
+  };
+```
 
 ## Sign up and Log in
 Handle sign up and log in useing AWS Coginto.
