@@ -17,12 +17,9 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+1. install the dependencies
 ```
-Give the example
+npm install
 ```
 
 And repeat
@@ -39,8 +36,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* (http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* AWS sdk(https://maven.apache.org/) - Dependency Management
+* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* [npm](https://npm.community/)
+* [AWS sdk](https://github.com/aws/aws-sdk-js)
 
 ## Contributing
 
