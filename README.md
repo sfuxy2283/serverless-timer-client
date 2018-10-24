@@ -2,6 +2,10 @@
 
 Simple timer app that works with AWS Ramda to handle user's requests
 
+## Example site
+[Serverless-timer](http://serverless-timer-client.s3-website.ap-northeast-2.amazonaws.com/)
+You can use this web app after signup or login by guest. 
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -22,23 +26,31 @@ Give examples
 npm install
 ```
 
-And repeat
-
+1. change configure detials in config.js
+```javascript
+# inside config.js
+export default {
+  apiGateway: {
+    REGION: "YOUR-API-GATEWAY-REGION",
+    URL: "YOUR-API-GATEWAY-END-POINT-URL"
+  },
+  cognito: {
+    REGION: "YOUR-COGNITO-REGION",
+    USER_POOL_ID: "YOUR-COGNITO-USER-POOL-ID",
+    APP_CLIENT_ID: "YOUR-COGNITO-APP-CLIENT-ID",
+    IDENTITY_POOL_ID: "YOUR-COGNITO-IDENTITY-POOL-ID"
+  }
+};
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Deployment
-
-Add additional notes about how to deploy this on a live system
+Deploy this app to any hosting service that
+[How to deploy single page application to AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
 
 ## Built With
-
-* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-* [npm](https://npm.community/)
+* [Create React App](https://github.com/facebook/create-react-app)
 * [AWS sdk](https://github.com/aws/aws-sdk-js)
+* [npm](https://npm.community/)
 
 ## Contributing
 
@@ -66,32 +78,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Example site
-you can use this web app after signup or login by guest. 
 
-# How to use it
-1. npm install
-```
-npm install
-```
 
-1. change configure detials in config.js
-
-```javascript
-# inside config.js
-export default {
-  apiGateway: {
-    REGION: "YOUR-API-GATEWAY-REGION",
-    URL: "YOUR-API-GATEWAY-END-POINT-URL"
-  },
-  cognito: {
-    REGION: "YOUR-COGNITO-REGION",
-    USER_POOL_ID: "YOUR-COGNITO-USER-POOL-ID",
-    APP_CLIENT_ID: "YOUR-COGNITO-APP-CLIENT-ID",
-    IDENTITY_POOL_ID: "YOUR-COGNITO-IDENTITY-POOL-ID"
-  }
-};
-```
 
 1. deploy to hosting service (How deploy static homepage on the AWS S3)
 
