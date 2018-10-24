@@ -1,32 +1,23 @@
 # Serverless Timer
-
-Simple timer app that works with AWS Ramda to handle user's requests
+Simple timer app that works without server, using AWS Ramda to handle user's requests
 
 ## Example site
 [Serverless-timer](http://serverless-timer-client.s3-website.ap-northeast-2.amazonaws.com/)
 You can use this web app after signup or login by guest. 
 
 ## Getting Started
-
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
-
 * Using this app, first you have to deploy [the timer api](https://github.com/sfuxy2283/serverless-timer-api) to your AWS.
 * Any hosting service to deploy your single page application (e.g. S3, github page, heroku ...) 
 
-```
-Give examples
-```
-
 ### Installing
-
 1. install the dependencies
 ```
 npm install
 ```
-
-1. change configure detials in config.js
+1. change configure detials in [config.js](https://github.com/sfuxy2283/serverless-timer-client/blob/master/src/config.js)
 ```javascript
 # inside config.js
 export default {
@@ -52,36 +43,13 @@ Deploy this app to any hosting service that
 * [AWS sdk](https://github.com/aws/aws-sdk-js)
 * [npm](https://npm.community/)
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
-
-
-1. deploy to hosting service (How deploy static homepage on the AWS S3)
 
 # How the application works
 ## Components structure
@@ -89,6 +57,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Database structure
 
 ## How the app calculate timer from the data
+
+500초 마다 업데이트되어서 최근 시간을 유지할 수 있다
+The timers update every 500 miliseconds so it kee
 
 ### Start timer
 Now - sinceFrom 
@@ -102,8 +73,6 @@ startTimer = async timerId => {
       });
      ...
   };
-
-
 ```
 
 ### Stop timer
