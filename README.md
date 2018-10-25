@@ -55,25 +55,26 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Components structure
 
 ## Database structure
+Using DynamoDB that NOSQL database serviced by AWS.
+
+userId - id of user
+timerId - id of timer
+title - title of timer
+project - project name of timer
+elapsed - elapsed time when the timer had been working before.
+runningSience - the time that a start button was clicked. 
 
 ## How the app calculate timer from the data
+1. When timer components are mounted, the app fetches data from database and pass the data to state of timer component.
+1. User push the start button on the timer.
+1. Timer component calculates elapsed time add elapsed from the state and substraction of now and the time when start button was clicked (elapsed + (now - runningSince).
+1. Timer is updated every 500 milisecons whenever updated, new elapsed time is calculated.
 
-500초 마다 업데이트되어서 최근 시간을 유지할 수 있다
-The timers update every 500 miliseconds so it kee
 
 ### Start timer
 Now - sinceFrom 
 
-```javascript
-startTimer = async timerId => {
-    try {
-      const startTime = Date.now();
-      await API.put("timers", `/timers/${timerId}/start`, {
-        body: { start: startTime }
-      });
-     ...
-  };
-```
+
 
 ### Stop timer
 total elapsed time  = preivous elapsed time + new elapsed time(the time user click stop button - running since)
