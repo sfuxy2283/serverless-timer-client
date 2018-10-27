@@ -44,9 +44,8 @@ Deploy this app to any hosting service that
 * [npm](https://npm.community/)
 
 ## Acknowledgments
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* 
+* This app is inspired from [serverless-stack](https://serverless-stack.com/).
 
 # How the application works
 ## Components structure
