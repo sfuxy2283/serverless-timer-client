@@ -1,4 +1,4 @@
-# Serverless Timer
+# Serverless Timer - client
 Simple timer app that works without server, using AWS Ramda to handle user's requests
 
 ## Example site
@@ -42,9 +42,6 @@ Deploy this app to any hosting service that
 * [Create React App](https://github.com/facebook/create-react-app)
 * [AWS sdk](https://github.com/aws/aws-sdk-js)
 * [npm](https://npm.community/)
-
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 * Hat tip to anyone whose code was used
