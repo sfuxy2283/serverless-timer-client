@@ -89,20 +89,3 @@ runningSince = null
     ...
   };
 ```
-
-## Sign up and Log in
-Handle sign up and log in useing AWS Coginto.
-Users can login by thier email
-Coginto sends configuration mail to user
-
-### Sign up process
-1. User type email, password and confirm password on the sign up form and submit.
-1. Cognito sends configuration mail to user to check the email is valid or not.
-1. User type configuration code on the configure form and submit.
-1. Cognito check the code and it is valid user singed up.
-
-### Log in process
-1. User type email and password on the login form and submit.
-1. Cognito authenticates user and authorizate user by Identity pool.
-1. Brower get JWT from Cognito and save it in the local storage
-
