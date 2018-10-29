@@ -52,15 +52,15 @@ Deploy this app to any hosting service that
   <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer.png" width="500" title="Github Logo">
 </p>
 
-## Database structure
+### Database structure
 Using DynamoDB that NOSQL database serviced by AWS.
 
-userId - id of user
-timerId - id of timer
-title - title of timer
-project - project name of timer
-elapsed - elapsed time when the timer had been working before.
-runningSience - the time that a start button was clicked. 
+* userId - id of user
+* timerId - id of timer
+* title - title of timer
+* project - project name of timer
+* elapsed - elapsed time when the timer had been working before.
+* runningSience - the time that a start button was clicked. 
 
 ## How the app calculate timer from the data
 1. When timer components are mounted, the app fetches data from database and pass the data to state of timer component.
