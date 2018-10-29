@@ -44,11 +44,11 @@ Deploy this app to any hosting service that
 * [npm](https://npm.community/)
 
 ## Acknowledgments
-* 
 * This app is inspired from [serverless-stack](https://serverless-stack.com/).
 
-# How the application works
-## Components structure
+## How the timer works
+### Components structure
+![image](timer.png)
 
 ## Database structure
 Using DynamoDB that NOSQL database serviced by AWS.
