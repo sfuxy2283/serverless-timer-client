@@ -47,7 +47,7 @@ Deploy this app to any hosting service that
 ## How this app works
 ### Components structure
 <p align="center">
-  <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer_structure.pngg" width="500" title="diagram">
+  <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer_structure.png" width="500" title="diagram">
 </p>
 
 #### TimerContainer
