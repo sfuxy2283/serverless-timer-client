@@ -49,17 +49,17 @@ Deploy this app to any hosting service that
 ## How the timer works
 ### Components structure
 <p align="center">
-  <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer.png" width="500" title="Github Logo">
+  <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer_sturucture.png" width="500" title="diagram">
 </p>
 
 #### TimerContainer
-
+Fetches datas about timers from the database and renders child compoenets.
 #### EditableTimer
 If user press edit button, it displays TimerForm component, otherwise, display Timer component.
-##### Timer
-User can delete, edit, start, stop the timer.
-##### TimerForm
-If user can press edit button, the timer changes to timer form, then user can edit title and project of the timer.
+#### Timer
+It displays elapsed time. User can start, stop, delete and edit timer
+#### TimerForm
+User can edit title and project of timer.
 #### AddTimerButton
 If user push this button, it changes to timer form to add new timer into timer container.
 
