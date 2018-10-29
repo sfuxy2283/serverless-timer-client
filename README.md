@@ -38,6 +38,7 @@ Deploy this app to any hosting service that
 
 ## Built With
 * [Create React App](https://github.com/facebook/create-react-app)
+* [Material UI](https://github.com/mui-org/material-ui)
 * [AWS sdk](https://github.com/aws/aws-sdk-js)
 * [npm](https://npm.community/)
 
