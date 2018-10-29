@@ -48,7 +48,7 @@ Deploy this app to any hosting service that
 
 ## How the timer works
 ### Components structure
-![image](timer.png)
+![image](timer.png | width=300)
 
 ## Database structure
 Using DynamoDB that NOSQL database serviced by AWS.
