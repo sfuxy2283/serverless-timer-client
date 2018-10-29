@@ -6,8 +6,6 @@ Simple timer app that works without server, using AWS Ramda to handle user's req
 You can use this web app after signup or login by guest. 
 
 ## Getting Started
-
-
 ### Prerequisites
 * Using this app, first you have to deploy [the timer api](https://github.com/sfuxy2283/serverless-timer-api) to your AWS.
 * Any hosting service to deploy your single page application (e.g. S3, github page, heroku ...) 
@@ -46,10 +44,10 @@ Deploy this app to any hosting service that
 ## Acknowledgments
 * This app is inspired from [serverless-stack](https://serverless-stack.com/).
 
-## How the timer works
+## How this app works
 ### Components structure
 <p align="center">
-  <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer_sturucture.png" width="500" title="diagram">
+  <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer_structure.pngg" width="500" title="diagram">
 </p>
 
 #### TimerContainer
@@ -65,7 +63,6 @@ If user push this button, it changes to timer form to add new timer into timer c
 
 ### Database structure
 Using DynamoDB that NOSQL database serviced by AWS.
-
 * userId - id of user
 * timerId - id of timer
 * title - title of timer
@@ -73,29 +70,9 @@ Using DynamoDB that NOSQL database serviced by AWS.
 * elapsed - elapsed time when the timer had been working before.
 * runningSience - the time that a start button was clicked. 
 
-### How the app calculate timer from the data
-1. When timer components are mounted, the app fetches data from database and pass the data to state of timer component.
-1. On the timer the elapsed is displayed.
-1. Timer component calculates elapsed time add elapsed from the state and substraction of now and the time when start button was clicked (elapsed + (now - runningSince)).
-1. Timer is updated every 500 milisecons whenever updated, new elapsed time is calculated.
-
-### Start timer
-Now - sinceFrom 
-
-
-
-### Stop timer
-total elapsed time  = preivous elapsed time + new elapsed time(the time user click stop button - running since)
-runningSince = null
-```javascript
-  stopTimer = async timer => {
-    const now = Date.now();
-    const lastElapsed = now - timer.runningSince;
-    const updatedElapsed = timer.elapsed + lastElapsed;
-    try {
-      await API.put("timers", `/timers/${timer.timerId}/stop`, {
-        body: { elapsed: updatedElapsed }
-      });
-    ...
-  };
-```
+### Logic in timer
+1. Timer component displayes elapsed.
+1. If user click "Start" button, set runningSince to the start time.
+1. Timer component calculates the differnce between the strat time. and the current time and add it to previous elapsed time.
+1. Timer is updated every 500 milisecons, when it is re-rendered, it calculates new elapsed time using same logic(elapsed + (now - runningSince)).
+1. When user clicks "Stop" button, the difference between the start time and the current time is added to elapsed and runningSince is set to null.
