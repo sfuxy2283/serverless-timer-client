@@ -6,7 +6,7 @@ Simple timer app that works without server, using AWS Ramda to handle user's req
 You can use this web app after signup or login by guest. 
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 
 ### Prerequisites
 * Using this app, first you have to deploy [the timer api](https://github.com/sfuxy2283/serverless-timer-api) to your AWS.
@@ -52,6 +52,17 @@ Deploy this app to any hosting service that
   <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer.png" width="500" title="Github Logo">
 </p>
 
+#### TimerContainer
+
+#### EditableTimer
+If user press edit button, it displays TimerForm component, otherwise, display Timer component.
+##### Timer
+User can delete, edit, start, stop the timer.
+##### TimerForm
+If user can press edit button, the timer changes to timer form, then user can edit title and project of the timer.
+#### AddTimerButton
+If user push this button, it changes to timer form to add new timer into timer container.
+
 ### Database structure
 Using DynamoDB that NOSQL database serviced by AWS.
 
@@ -62,12 +73,11 @@ Using DynamoDB that NOSQL database serviced by AWS.
 * elapsed - elapsed time when the timer had been working before.
 * runningSience - the time that a start button was clicked. 
 
-## How the app calculate timer from the data
+### How the app calculate timer from the data
 1. When timer components are mounted, the app fetches data from database and pass the data to state of timer component.
-1. User push the start button on the timer.
-1. Timer component calculates elapsed time add elapsed from the state and substraction of now and the time when start button was clicked (elapsed + (now - runningSince).
+1. On the timer the elapsed is displayed.
+1. Timer component calculates elapsed time add elapsed from the state and substraction of now and the time when start button was clicked (elapsed + (now - runningSince)).
 1. Timer is updated every 500 milisecons whenever updated, new elapsed time is calculated.
-
 
 ### Start timer
 Now - sinceFrom 
