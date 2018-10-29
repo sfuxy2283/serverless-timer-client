@@ -48,9 +48,8 @@ Deploy this app to any hosting service that
 
 ## How the timer works
 ### Components structure
-![image](timer.png)
 <p align="center">
-  <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer.png" width="256" title="Github Logo">
+  <img src="https://github.com/sfuxy2283/serverless-timer-client/blob/master/timer.png" width="500" title="Github Logo">
 </p>
 
 ## Database structure
