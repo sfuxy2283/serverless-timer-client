@@ -48,7 +48,10 @@ Deploy this app to any hosting service that
 
 ## How the timer works
 ### Components structure
-![image](timer.png | width=300)
+![image](timer.png)
+<p align="center">
+  <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="256" title="Github Logo">
+</p>
 
 ## Database structure
 Using DynamoDB that NOSQL database serviced by AWS.
